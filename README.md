@@ -34,6 +34,7 @@ The project focuses on building scalable, maintainable, and production-ready Flu
 
 # 📂 Project Structure
 
+```bash
 lib
 │
 ├── core
@@ -74,8 +75,7 @@ lib
 │       └── screens
 │
 └── main.dart
-
-
+```
 
 🧠 Architecture
 
