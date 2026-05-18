@@ -1,17 +1,94 @@
-# movies_app
+# 🎬 Movies App
 
-A new Flutter project.
+A Flutter Movies App built mainly to learn and practice **Clean Architecture** in real-world Flutter applications.
 
-## Getting Started
+Although the main focus of this project is Clean Architecture, it also includes other technologies and concepts that I already have experience with, such as API integration using Dio, state management with Bloc/Cubit, and dependency injection using GetIt.
 
-This project is a starting point for a Flutter application.
+The project focuses on building scalable, maintainable, and production-ready Flutter applications using a clean and organized architecture.
+---
 
-A few resources to get you started if this is your first Flutter project:
+# 🚀 Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Fetch movies data from API
+- Clean Architecture structure
+- State Management using Bloc/Cubit
+- Dependency Injection using GetIt
+- Smooth animations
+- Cached network images
+- Beautiful UI with shimmer loading effects
+- Carousel slider for movies banners
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+# 🛠️ Tech Stack
+
+- Flutter
+- Dart
+- Clean Architecture
+- Bloc / Cubit
+- Dio
+- GetIt (Service Locator)
+- REST API
+
+---
+
+# 📂 Project Structure
+
+lib
+│
+├── core
+│   ├── error
+│   │   ├── exceptions.dart
+│   │   └── failure.dart
+│   │
+│   ├── network
+│   │   ├── api_constance.dart
+│   │   └── error_message_model.dart
+│   │
+│   ├── services
+│   │   └── services_locator.dart
+│   │
+│   ├── usecase
+│   │   └── base_usecase.dart
+│   │
+│   └── utils
+│       ├── app_constance.dart
+│       ├── app_string.dart
+│       ├── dummy.dart
+│       └── enums.dart
+│
+├── movies
+│   ├── data
+│   │   ├── datasource
+│   │   ├── models
+│   │   └── repository
+│   │
+│   ├── domain
+│   │   ├── entities
+│   │   ├── repository
+│   │   └── usecases
+│   │
+│   └── presentation
+│       ├── components
+│       ├── controller
+│       └── screens
+│
+└── main.dart
+
+
+
+🧠 Architecture
+
+This project follows Clean Architecture:
+
+Presentation Layer
+UI
+Bloc/Cubit
+Domain Layer
+Entities
+Repositories
+Use Cases
+Data Layer
+API Services
+Models
+Repository Implementation
