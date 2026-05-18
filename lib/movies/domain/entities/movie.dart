@@ -7,6 +7,7 @@ class Movie extends Equatable {
   final List<int> generIds;
   final String overview;
   final double voteAverage;
+  final String releaseDate;
 
   const Movie({
     required this.id,
@@ -15,6 +16,7 @@ class Movie extends Equatable {
     required this.generIds,
     required this.overview,
     required this.voteAverage,
+    required this.releaseDate,
   });
 
   @override
@@ -25,5 +27,6 @@ class Movie extends Equatable {
     generIds,
     overview,
     voteAverage,
+    releaseDate,
   ];
 }
