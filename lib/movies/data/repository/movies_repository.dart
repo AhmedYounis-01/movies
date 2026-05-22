@@ -14,7 +14,7 @@ abstract class MoviesRepository extends BaseMovieRepository {
     final result = await baseMovieRemoteDatasource.getNowPlayingMovies();
     try {
       return Right(result);
-    } on ServerException catch (f) {
+    } on ServerException catch (failure) {
       return Left(ServerFailure(failure.errorMsgModel.statusMessage));
     }
   }
