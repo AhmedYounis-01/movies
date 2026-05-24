@@ -5,7 +5,7 @@ import 'package:movies_app/movies/data/datasource/movie_remote_datasource.dart';
 import 'package:movies_app/movies/domain/entities/movie.dart';
 import 'package:movies_app/movies/domain/repository/base_movie_repository.dart';
 
-abstract class MoviesRepository extends BaseMovieRepository {
+  class MoviesRepository extends BaseMovieRepository {
   final BaseMovieRemoteDatasource baseMovieRemoteDatasource;
 
   MoviesRepository({required this.baseMovieRemoteDatasource});
