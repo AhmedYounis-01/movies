@@ -9,6 +9,6 @@ class GetNowPlayingMoviesUsecase {
   GetNowPlayingMoviesUsecase(this.baseMovieRepository);
 
   Future<Either<Failure, List<Movie>>> execute() async {
-    return await baseMovieRepository.getNowPlayingMovies();
+    return await baseMovieRepository.getNowPlayingMovies(); // add copy with to reduce
   }
 }
