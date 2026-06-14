@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
 
 import 'package:bloc/bloc.dart';
 import 'package:movies_app/core/constants/enums.dart';
@@ -26,7 +27,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     GetNowPlayingMoviesEvent event,
     Emitter<MoviesState> emit,
   ) async {
-    final result = await getNowPlayingMoviesUsecase.execute();
+    final result = await getNowPlayingMoviesUsecase();
     result.fold(
       (l) => emit(
         state.copyWith(
@@ -47,7 +48,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     GetTopRatedMoviesEvent event,
     Emitter<MoviesState> emit,
   ) async {
-    final result = await getTopRatedMoviesUsecase.execute();
+    final result = await getTopRatedMoviesUsecase();
     result.fold(
       (l) => emit(
         state.copyWith(
@@ -65,7 +66,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     GetPopularMoviesEvent event,
     Emitter<MoviesState> emit,
   ) async {
-    final result = await getTopPopularMoviesUsecase.execute();
+    final result = await getTopPopularMoviesUsecase();
     result.fold(
       (l) => emit(
         state.copyWith(
