@@ -92,3 +92,11 @@ Data Layer
 API Services
 Models
 Repository Implementation
+
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/movie_screen.png" width="300">
+  <img src="assets/screenshots/movie_details.png" width="300">
+</p>
