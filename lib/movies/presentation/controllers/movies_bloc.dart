@@ -20,6 +20,11 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     on<GetNowPlayingMoviesEvent>(_getNowPlayingMovies);
     on<GetTopRatedMoviesEvent>(_getTopRatedMovies);
     on<GetPopularMoviesEvent>(_getPopularMovies);
+    // Trigger initial data fetch when the bloc is created so the UI
+    // transitions from the loading state to loaded/error accordingly.
+    add(GetNowPlayingMoviesEvent());
+    add(GetPopularMoviesEvent());
+    add(GetTopRatedMoviesEvent());
   }
 
   FutureOr<void> _getNowPlayingMovies(

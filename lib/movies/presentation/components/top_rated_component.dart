@@ -6,7 +6,6 @@ import 'package:movies_app/core/constants/constants.dart';
 import 'package:movies_app/core/constants/enums.dart';
 import 'package:movies_app/movies/presentation/controllers/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/controllers/movies_state.dart';
-import 'package:movies_app/movies/presentation/screens/dummy.dart';
 import 'package:shimmer/shimmer.dart';
 
 class TopRatedComponent extends StatelessWidget {
@@ -34,15 +33,14 @@ class TopRatedComponent extends StatelessWidget {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  itemCount: moviesList.length,
+                  itemCount: state.topRatedMovies.length,
                   itemBuilder: (context, index) {
-                    final movie = moviesList[index];
+                    final movie = state.topRatedMovies[index];
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
                         onTap: () {
-                          /// TODO : NAVIGATE TO  MOVIE DETAILS
-                        },
+                         },
                         child: ClipRRect(
                           borderRadius: const BorderRadius.all(
                             Radius.circular(8.0),

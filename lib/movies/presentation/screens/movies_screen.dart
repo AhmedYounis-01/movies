@@ -37,9 +37,7 @@ class MoviesScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        /// TODO : NAVIGATION TO POPULAR SCREEN
-                      },
+                      onTap: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -72,9 +70,7 @@ class MoviesScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        /// TODO : NAVIGATION TO Top Rated Movies Screen
-                      },
+                      onTap: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(

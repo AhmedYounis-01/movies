@@ -6,7 +6,6 @@ import 'package:movies_app/core/constants/constants.dart';
 import 'package:movies_app/core/constants/enums.dart';
 import 'package:movies_app/movies/presentation/controllers/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/controllers/movies_state.dart';
-import 'package:movies_app/movies/presentation/screens/dummy.dart';
 import 'package:shimmer/shimmer.dart';
 
 class PopularComponent extends StatelessWidget {
@@ -14,7 +13,7 @@ class PopularComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MoviesBloc, MoviesState>( 
+    return BlocBuilder<MoviesBloc, MoviesState>(
       buildWhen: (previous, current) =>
           previous.popularState != current.popularState ||
           previous.popularMovies != current.popularMovies,
@@ -34,15 +33,13 @@ class PopularComponent extends StatelessWidget {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  itemCount: moviesList.length,
+                  itemCount: state.popularMovies.length,
                   itemBuilder: (context, index) {
-                    final movie = moviesList[index];
+                    final movie = state.popularMovies[index];
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
-                        onTap: () {
-                          /// TODO : NAVIGATE TO  MOVIE DETAILS
-                        },
+                        onTap: () {},
                         child: ClipRRect(
                           borderRadius: const BorderRadius.all(
                             Radius.circular(8.0),
